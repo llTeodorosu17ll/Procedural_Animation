@@ -701,8 +701,8 @@ Transform:
   m_GameObject: {fileID: 336098944}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.4}
-  m_LocalScale: {x: 1.5000004, y: 1.5, z: 1.8000001}
+  m_LocalPosition: {x: 0, y: 0, z: -5.399994}
+  m_LocalScale: {x: 1.5000001, y: 1.5, z: 1.8000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1227770403}
@@ -2229,13 +2229,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.92387867, z: -0, w: 0.38268548}
-  m_LocalPosition: {x: 518, y: 5, z: 519}
+  m_LocalRotation: {x: 0.09904577, y: -0.89239913, z: 0.23911765, w: 0.3696438}
+  m_LocalPosition: {x: 18, y: 7, z: 19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
+  m_Father: {fileID: 2063094181}
+  m_LocalEulerAnglesHint: {x: 30, y: -135, z: 0}
 --- !u!1 &1024384797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,8 +2534,8 @@ Transform:
   m_GameObject: {fileID: 1125746304}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.4}
-  m_LocalScale: {x: 1.5000004, y: 1.5, z: 1.8000001}
+  m_LocalPosition: {x: 0, y: 0, z: 5.399994}
+  m_LocalScale: {x: 1.5000002, y: 1.5, z: 1.8000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2087250009}
@@ -3827,9 +3827,12 @@ GameObject:
   - component: {fileID: 2063094180}
   - component: {fileID: 2063094183}
   - component: {fileID: 2063094182}
+  - component: {fileID: 2063094184}
+  - component: {fileID: 2063094185}
+  - component: {fileID: 2063094186}
   m_Layer: 0
-  m_Name: spider
-  m_TagString: Untagged
+  m_Name: Spider
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3844,7 +3847,7 @@ Animator:
   m_GameObject: {fileID: 2063094178}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 004541743282a0241bbedab914a3ded4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3869,12 +3872,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1636237502}
   - {fileID: 764160298}
+  - {fileID: 1636237502}
   - {fileID: 1383986894}
   - {fileID: 1125746305}
   - {fileID: 825040821}
   - {fileID: 336098945}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!144 &2063094182
@@ -3950,6 +3954,57 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2063094184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063094178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893d096707c62c640994f1ef7af12d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2063094185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063094178}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2063094186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063094178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e8205ec8931524aaf8392662237b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingFBAnim: {fileID: 2063094180}
+  walkingLRAnim: {fileID: 2063094180}
+  moveVector: {x: 0, y: 0, z: 0}
+  rigidbody: {fileID: 2063094183}
+  jumpPower: 1
+  speed: 1
 --- !u!1 &2087250008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4138,7 +4193,6 @@ CapsuleCollider:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 833020945}
   - {fileID: 1720988198}
