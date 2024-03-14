@@ -27,7 +27,7 @@ public class legmover : MonoBehaviour
     void Start()
     {
         restingposition = target.position;
-        steppingpoint.position = new Vector3(restingposition.x * offset, restingposition.y, restingposition.x);
+        steppingpoint.position = new Vector3(restingposition.x + offset, restingposition.y, restingposition.x);
     }
 
     // Update is called once per frame
