@@ -23,6 +23,16 @@ public class legmover : MonoBehaviour
     public bool hasmoved;
     public bool moving;
     public bool movingdown;
+    public float movedirection
+    {
+        get
+        {
+            return Controller.instance.movy;
+        }
+    }
+    public bool walkingbackwards = false;
+
+
 
     void Start()
     {
@@ -33,6 +43,19 @@ public class legmover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(movedirection < 0 && walkingbackwards != true)
+        {
+            walkingbackwards = true;
+            offset = -0.5f;
+            steppingpoint.localPosition = new Vector3(steppingpoint.localPosition.x + offset, steppingpoint.localPosition.y, steppingpoint.localPosition.z);
+        }
+        else if(movedirection > 0 && walkingbackwards != false)
+        {
+            walkingbackwards = false;
+            offset = 0.5f;
+            steppingpoint.localPosition = new Vector3(steppingpoint.localPosition.x + offset, steppingpoint.localPosition.y, steppingpoint.localPosition.z);
+        }
+
         newposition = calculatepoint(steppingpoint.position);
 
         if (Vector3.Distance(restingposition, newposition) > movedistance || moving && leggrounded)

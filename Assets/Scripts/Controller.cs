@@ -8,7 +8,7 @@ public class Controller : MonoBehaviour
     public float speed;
     public float angspeed;
     private float movx;
-    private float movy;
+    public float movy;
 
 
     // Start is called before the first frame update
@@ -16,6 +16,14 @@ public class Controller : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
     }
+
+    public static Controller instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
 
     // Update is called once per frame
     void Update()
